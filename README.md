@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Building a Counter in React
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The purpose of this assignment is to deepen your understanding of state management in React using the useState hook. You will build two components: a counter that can increase, decrease, and reset its value, and a form that captures user input in a controlled manner. This exercise will reinforce the concepts of stateful logic in functional components and demonstrate the power of React's reactivity system.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Set Up
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- In your system terminal make sure you are in the directory that you want your Next app to go. To see where you are you can run:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+        pwd
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- If you need to navigate somewhere else, to see the files in your current directory, you can run:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+        ls
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- You can move into the correct directory by running:
 
-## Learn More
+        cd <desired directory>
 
-To learn more about Next.js, take a look at the following resources:
+- Create a New Next.js Application
+    * Run - NOTE: if we run w/out a project name, the terminal will ask us to enter a project name. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+            npx create-next-app@latest
+    
+- You will then be asked a series of questions...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ![terminal questions](<terminal.png>)
 
-## Deploy on Vercel
+- Navigate to your new project by running:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+        cd next-assignment-3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Then you can open a VScode window by running: 
+
+        code .
+
+- Create a new repository on Github. NOTE: don't select add README or .gitignore
+    * Quick set up will pop up...Run the code that says Add repo to existing repo on the command-line. 
+
+- Add your Next app to your new repository by running this in bash terminal:
+
+        git remote add origin https://github.com/yourusername/your-repository.git
+        git branch -M main
+        git push -u origin main
+
+# Requirements:
+
+* Counter page
+    - Create a page for your counter. For example, src/pages/sheep/index.js
+    - Feel free to choose something else to count.
+    - Export your page with export default
+
+* Display the Counter:
+    - The counter starts at 0 and should be displayed on the screen.
+
+* Increment Button:
+    - The application should have an "Increment" button.
+    - When this button is clicked, the counter value should increase by 1.
+
+* Decrement Button:
+    - The application should have a "Decrement" button.
+    - When this button is clicked, the counter value should decrease by 1.
+
+* Prevent Negative Values:
+    - The counter should not go below 0. Ensure that when the user tries to decrement below 0, it stays at 0.
+
+## Stretch Goals:
+
+* Reset Button:
+    - Add a "Reset" button that resets the counter to 0 when clicked.
+
+* Custom Step Increment/Decrement:
+    - Allow users to input a custom step size. For example, instead of always increasing or decreasing by 1, users can set the step size (e.g., 2, 5, etc.).
+
+* Double Increment/Decrement:
+    - Add buttons for "Double Increment" and "Double Decrement" to increase or decrease the counter by 2 in one click.
+
