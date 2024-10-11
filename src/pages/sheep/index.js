@@ -1,25 +1,21 @@
 import { useState } from 'react';
 
-export default function MyApp() {
-  return (
-    <div>
-      <h1>Counters that update separately</h1>
-      <MyButton />
-      <MyButton />
-    </div>
-  );
-}
-
-function MyButton() {
+export default function MyCounterApp() {
   const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
+  function increment() {
+    setCount(count + 1)
   }
-
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
+  
+  function decrement() {
+    setCount(Math.max(count - 1, 0))
+  }
+    return (
+      <div>
+        <h1>My Counter App</h1>
+        <h2>Count: {count}</h2>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+      </div>
+    )
 }
+
