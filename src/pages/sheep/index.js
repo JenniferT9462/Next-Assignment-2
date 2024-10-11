@@ -7,7 +7,7 @@ export default function MyCounterApp() {
   }
   
   function decrement() {
-    setCount(Math.max(count - 1, 0))
+    setCount(Math.max(count - 1, 0)) //Math.max to set the decrement with a max of 0
   }
     return (
       <div>
