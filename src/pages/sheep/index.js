@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function MyCounterApp() {
   const [count, setCount] = useState(0);
   //Set the state for the inputs
-  // const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
   //Function to increase count by 1
   function increment() {
     setCount(count + 1)
@@ -22,6 +22,15 @@ export default function MyCounterApp() {
   function doubleDecrement() {
     setCount(count - count)
   };
+  //Set the input value to the count
+  function handleIncrementInput(e) {
+    setInputValue(e.target.value);
+  }
+  function handleIncrement() {
+    const valueToAdd = Number(inputValue)
+    setCount(count + valueToAdd);
+    setInputValue('');
+  }
   
   
   return (
@@ -34,6 +43,10 @@ export default function MyCounterApp() {
         <button onClick={doubleIncrement}>Double Increment</button>
         <button onClick={doubleDecrement}>Double Decrement</button>
         <br/>
+        <input
+          onChange={handleIncrementInput}
+        />
+        <button onClick={handleIncrement}>Increment</button>
         
         <button onClick={reset}>Reset</button>
       </div>
