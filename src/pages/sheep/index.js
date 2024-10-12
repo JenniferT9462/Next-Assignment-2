@@ -47,7 +47,7 @@ export default function MyCounterApp() {
           onChange={handleIncrementInput}
         />
         <button onClick={handleIncrement}>Increment</button>
-        
+        <br/>
         <button onClick={reset}>Reset</button>
       </div>
     )
