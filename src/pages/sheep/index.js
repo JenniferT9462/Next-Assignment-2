@@ -37,17 +37,21 @@ export default function MyCounterApp() {
       <div>
         <h1>My Counter App</h1>
         <h2>Count: {count}</h2>
+        {/* Increment and decrement by 1 buttons */}
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
         <br/>
+        {/* Double Increment and Decrement */}
         <button onClick={doubleIncrement}>Double Increment</button>
         <button onClick={doubleDecrement}>Double Decrement</button>
         <br/>
+        {/* Input for custom increment */}
         <input
           onChange={handleIncrementInput}
         />
         <button onClick={handleIncrement}>Increment</button>
         <br/>
+        {/* Reset count button */}
         <button onClick={reset}>Reset</button>
       </div>
     )
