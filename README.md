@@ -43,6 +43,18 @@ The purpose of this assignment is to deepen your understanding of state manageme
         git remote add origin https://github.com/yourusername/your-repository.git
         git branch -M main
         git push -u origin main
+- In your editor's terminal(bash) run:
+
+        npm install
+
+    * To install dependencies
+    
+- To start development server run:
+
+        npm run dev
+
+- This will start the development server, and your Next.js app will be accessible at http://localhost:3000 in your web browser.
+
 # Functionality
 
 * You will need to import useState to be able to declare and update state variables within the components: 
@@ -81,7 +93,7 @@ The purpose of this assignment is to deepen your understanding of state manageme
                 </div>
             );
         }
-        
+     
 # Requirements:
 
 * Counter page
