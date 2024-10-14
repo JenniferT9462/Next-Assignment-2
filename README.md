@@ -43,7 +43,45 @@ The purpose of this assignment is to deepen your understanding of state manageme
         git remote add origin https://github.com/yourusername/your-repository.git
         git branch -M main
         git push -u origin main
+# Functionality
 
+* You will need to import useState to be able to declare and update state variables within the components: 
+
+        import { useState } from 'react';
+
+* Inside the functional component, call useState with a initial value: 
+
+        const [count, setCount] = useState(0);
+
+    - The 'count' is the variable that holds the current state value.
+    - The 'setCount' is a function used to update the state variable. 
+
+* To update the 'count' you call 'setCount':
+
+        setCount(newValue);
+
+* Example of the useState hook being used to make a counter app:
+
+        export default function MyCounterApp() {
+            const [count, setCount] = useState(0);
+            function increment() {
+                setCount(count + 1)
+            };
+            function decrement() {
+                //Math.max to set the decrement with a max of 0
+                setCount(Math.max(count - 1, 0)) 
+            };
+
+            return (
+                <div>
+                    <h1>My Counter App</h1>
+                    <h2>Count: {count}</h2>
+                    <button onClick={increment}>Increment</button>
+                    <button onClick={decrement}>Decrement</button>
+                </div>
+            );
+        }
+        
 # Requirements:
 
 * Counter page
